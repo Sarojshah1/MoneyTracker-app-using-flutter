@@ -33,7 +33,7 @@ class _AccountPageState extends State<AccountPage> {
                 padding: EdgeInsets.fromLTRB(0, 20, 0, 15),
                 child: CircleAvatar(
                   radius: 100,
-                  backgroundImage: AssetImage('assets/profileImage.webp'),
+                  backgroundImage: NetworkImage("https://media.licdn.com/dms/image/D5603AQFqh6qz76dlFw/profile-displayphoto-shrink_800_800/0/1684239962628?e=2147483647&v=beta&t=zeen7YAdvkg2p0aEJjoJp8-wXdsbp22eBAvajfStiOc"),
                 ),
               ),
             ),
@@ -42,7 +42,7 @@ class _AccountPageState extends State<AccountPage> {
               child: Padding(
                   padding: EdgeInsets.fromLTRB(0, 20, 0, 15),
                   child: Text(
-                    "Hey Alisha!",
+                    "Saroj Kumar Sah",
                     style: TextStyle(
                         color: Colors.grey[500],
                         fontWeight: FontWeight.bold,
