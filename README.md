@@ -6,3 +6,7 @@ A money manager app is a digital tool designed to help individuals and businesse
 3. Income Tracking
 4. Reports and Analytics
 5. Security
+# Modeules used
+1. flutter
+2. database Hive
+   
