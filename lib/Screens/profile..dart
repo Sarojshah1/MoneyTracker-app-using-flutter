@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:managment/Screens/Login.dart';
 
 class AccountPage extends StatefulWidget {
   const AccountPage({Key? key}) : super(key: key);
@@ -104,6 +105,7 @@ class _AccountPageState extends State<AccountPage> {
                       ),
                       title: Text("FAQs"),
                       trailing: Icon(Icons.question_mark),
+                      // onTap: ,
                     ),
                     Divider(),
                   ],
@@ -118,7 +120,9 @@ class _AccountPageState extends State<AccountPage> {
                   style: ButtonStyle(
                       backgroundColor:
                       MaterialStateProperty.all<Color>(Colors.redAccent)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                  },
                   child: Text(
                     "Log Out",
                     style: TextStyle(color: Colors.white),
