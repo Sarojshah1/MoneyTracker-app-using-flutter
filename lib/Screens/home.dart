@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:managment/data/listdata.dart';
 import 'package:managment/data/model/add_date.dart';
 import 'package:managment/data/utlity.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -34,7 +36,7 @@ class _HomeState extends State<Home> {
                 return CustomScrollView(
                   slivers: [
                     SliverToBoxAdapter(
-                      child: SizedBox(height: 340, child: _head()),
+                      child: SizedBox(height: 400.h.w, child: _head()),
                     ),
                     SliverToBoxAdapter(
                       child: Padding(
@@ -54,7 +56,7 @@ class _HomeState extends State<Home> {
                               'See all',
                               style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                fontSize: 15,
+                                fontSize: 15.h.w,
                                 color: Colors.grey,
                               ),
                             ),
@@ -123,28 +125,28 @@ class _HomeState extends State<Home> {
           children: [
             Container(
               width: double.infinity,
-              height: 240,
+              height: 280.h.w,
               decoration: BoxDecoration(
                 color: Color(0xff368983),
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(20),
-                  bottomRight: Radius.circular(20),
+                  bottomLeft: Radius.circular(30.h.w),
+                  bottomRight: Radius.circular(30.h.w),
                 ),
               ),
               child: Stack(
                 children: [
                   Positioned(
-                    top: 35,
-                    left: 340,
+                    top: 35.h.w,
+                    left: 400.h.w,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(7),
                       child: Container(
-                        height: 40,
-                        width: 40,
-                        color: Color.fromRGBO(250, 250, 250, 0.1),
+                        height: 40.h.w,
+                        width: 40.h.w,
+                        color: Color.fromRGBO(50, 50, 50, 0.3),
                         child: Icon(
                           Icons.notification_add_outlined,
-                          size: 30,
+                          size: 30.h.w,
                           color: Colors.white,
                         ),
                       ),
@@ -159,7 +161,7 @@ class _HomeState extends State<Home> {
                           'Good afternoon',
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
-                            fontSize: 16,
+                            fontSize: 16.h.w,
                             color: Color.fromARGB(255, 224, 223, 223),
                           ),
                         ),
@@ -167,7 +169,7 @@ class _HomeState extends State<Home> {
                           'Saroj kumar sah',
                           style: TextStyle(
                             fontWeight: FontWeight.w600,
-                            fontSize: 20,
+                            fontSize: 26.h.w,
                             color: Colors.white,
                           ),
                         ),
@@ -180,15 +182,15 @@ class _HomeState extends State<Home> {
           ],
         ),
         Positioned(
-          top: 140,
-          left: 37,
+          top: 140.h.w,
+          left: 40.h.w,
           child: Container(
-            height: 170,
-            width: 320,
+            height: 210.h.w,
+            width: 370.h.w,
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                  color: Color.fromRGBO(47, 125, 121, 0.3),
+                  color: Color.fromRGBO(55, 25, 125, 0.4),
                   offset: Offset(0, 6),
                   blurRadius: 12,
                   spreadRadius: 6,
@@ -199,7 +201,7 @@ class _HomeState extends State<Home> {
             ),
             child: Column(
               children: [
-                SizedBox(height: 10),
+                SizedBox(height: 10.h.w),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
@@ -209,7 +211,7 @@ class _HomeState extends State<Home> {
                         'Total Balance',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
-                          fontSize: 16,
+                          fontSize: 16.h.w,
                           color: Colors.white,
                         ),
                       ),
@@ -220,7 +222,7 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
-                SizedBox(height: 7),
+                SizedBox(height: 10.h.w),
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
                   child: Row(
@@ -229,14 +231,14 @@ class _HomeState extends State<Home> {
                         'Npr: ${total()}',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 25,
+                          fontSize: 28.h.w,
                           color: Colors.white,
                         ),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(height: 25),
+                SizedBox(height: 25.h.w),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
@@ -245,20 +247,20 @@ class _HomeState extends State<Home> {
                       Row(
                         children: [
                           CircleAvatar(
-                            radius: 13,
+                            radius: 15.h.w,
                             backgroundColor: Color.fromARGB(255, 85, 145, 141),
                             child: Icon(
                               Icons.arrow_downward,
                               color: Colors.white,
-                              size: 19,
+                              size: 19.h.w,
                             ),
                           ),
-                          SizedBox(width: 7),
+                          SizedBox(width: 7.h.w),
                           Text(
                             'Income',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
-                              fontSize: 16,
+                              fontSize: 18.h.w,
                               color: Color.fromARGB(255, 216, 216, 216),
                             ),
                           ),
@@ -267,20 +269,20 @@ class _HomeState extends State<Home> {
                       Row(
                         children: [
                           CircleAvatar(
-                            radius: 13,
+                            radius: 15.h.w,
                             backgroundColor: Color.fromARGB(255, 85, 145, 141),
                             child: Icon(
                               Icons.arrow_upward,
                               color: Colors.white,
-                              size: 19,
+                              size: 19.h.w,
                             ),
                           ),
-                          SizedBox(width: 7),
+                          SizedBox(width: 7.h.w),
                           Text(
                             'Expenses',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
-                              fontSize: 16,
+                              fontSize: 18.h.w,
                               color: Color.fromARGB(255, 216, 216, 216),
                             ),
                           ),
@@ -289,9 +291,9 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
-                SizedBox(height: 6),
+                SizedBox(height: 8.h.w),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  padding: const EdgeInsets.symmetric(horizontal: 23),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -299,7 +301,7 @@ class _HomeState extends State<Home> {
                         'Npr. ${income()}',
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
-                          fontSize: 17,
+                          fontSize: 17.h.w,
                           color: Colors.white,
                         ),
                       ),

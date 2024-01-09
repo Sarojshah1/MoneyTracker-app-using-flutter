@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:managment/Screens/Login.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class AccountPage extends StatefulWidget {
   const AccountPage({Key? key}) : super(key: key);
@@ -34,7 +36,7 @@ class _AccountPageState extends State<AccountPage> {
                 padding: EdgeInsets.fromLTRB(0, 20, 0, 15),
                 child: CircleAvatar(
                   radius: 100,
-                  backgroundImage: NetworkImage("https://media.licdn.com/dms/image/D5603AQFqh6qz76dlFw/profile-displayphoto-shrink_800_800/0/1684239962628?e=2147483647&v=beta&t=zeen7YAdvkg2p0aEJjoJp8-wXdsbp22eBAvajfStiOc"),
+                  backgroundImage: AssetImage('images/userimg.png'),
                 ),
               ),
             ),
@@ -115,13 +117,13 @@ class _AccountPageState extends State<AccountPage> {
             Align(
               alignment: Alignment.topCenter,
               child: Padding(
-                padding: EdgeInsets.all(15),
+                padding: EdgeInsets.all(15.h.w),
                 child: ElevatedButton(
                   style: ButtonStyle(
                       backgroundColor:
                       MaterialStateProperty.all<Color>(Colors.redAccent)),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => LoginScreen()));
                   },
                   child: Text(
                     "Log Out",
